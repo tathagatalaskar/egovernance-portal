@@ -117,7 +117,7 @@ egovernance-portal/
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/tathagatacodes/egovernance-portal.git
+git clone https://github.com/tathagatalaskar/egovernance-portal.git
 cd egovernance-portal
 ```
 
@@ -142,25 +142,27 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The application will start on `http://localhost:5001`
+The application will start on `http://127.0.0.1:5001`
 
 ### Step 5: Access the Portal
-- **Citizen Portal**: http://localhost:5001
-- **Admin Panel**: http://localhost:5001/admin
+- **Citizen Portal**: http://127.0.0.1:5001
+- **Admin Panel**: http://127.0.0.1:5001/admin
   - Default password: `admin123` (⚠️ Change in production!)
 
 ## 📸 Screenshots
 
-*(Add screenshots of your application here after running it)*
 
 ### Home Page
-![Home Page](#)
+<img width="2930" height="1760" alt="image" src="https://github.com/user-attachments/assets/3fc1fa3e-8208-46ee-ab80-f17a6ac806c4" />
+
 
 ### Complaint Form
-![Complaint Form](#)
+<img width="2940" height="1744" alt="image" src="https://github.com/user-attachments/assets/1965be44-5f20-4c11-a6da-1fac46c76fe0" />
+
 
 ### Admin Dashboard
-![Admin Dashboard](#)
+<img width="2940" height="1680" alt="image" src="https://github.com/user-attachments/assets/35a3cada-a225-464f-8c43-95b2d244054b" />
+
 
 ## 🎯 Usage Guide
 
@@ -270,9 +272,10 @@ This project is open source and available for educational purposes.
 ## 👨‍💻 Author
 
 **Tathagata Laskar**
-- GitHub: [@tathagatacodes](https://github.com/tathagatacodes)
-- LinkedIn: [linkedin.com/in/tathagata-laskar](https://linkedin.com/in/tathagata-laskar)
-- Email: 24BCS11358@cuchd.in
+- GitHub: [@tathagatacodes](https://github.com/tathagatalaskar)
+- LinkedIn: [linkedin.com/in/tathagata-laskar](https://www.linkedin.com/in/tathagata-laskar-b2048a276/)
+- Email Official: 24BCS11358@cuchd.in
+- Personal Email: tathagata.laskar24@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -292,4 +295,4 @@ For issues, questions, or suggestions:
 
 **Project Status:** ✅ Active Development
 
-Last Updated: February 2026
+
