@@ -142,11 +142,11 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The application will start on `http://localhost:5000`
+The application will start on `http://localhost:5001`
 
 ### Step 5: Access the Portal
-- **Citizen Portal**: http://localhost:5000
-- **Admin Panel**: http://localhost:5000/admin
+- **Citizen Portal**: http://localhost:5001
+- **Admin Panel**: http://localhost:5001/admin
   - Default password: `admin123` (⚠️ Change in production!)
 
 ## 📸 Screenshots
