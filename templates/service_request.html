@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Service Request - Tripura E-Governance{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Request a Service</h1>
+        <p>Apply for government services online</p>
+    </div>
+</section>
+
+<section class="form-section">
+    <div class="container">
+        <div class="form-container">
+            <form method="POST" action="{{ url_for('service_request') }}" class="complaint-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="service_type">Service Type *</label>
+                    <select id="service_type" name="service_type" required>
+                        <option value="">Select Service</option>
+                        <option value="Birth Certificate">Birth Certificate</option>
+                        <option value="Death Certificate">Death Certificate</option>
+                        <option value="Caste Certificate">Caste Certificate</option>
+                        <option value="Income Certificate">Income Certificate</option>
+                        <option value="Domicile Certificate">Domicile Certificate</option>
+                        <option value="Driving License">Driving License</option>
+                        <option value="Ration Card">Ration Card</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Request Details *</label>
+                    <textarea id="details" name="details" rows="6" required placeholder="Provide necessary details for your service request"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Services - Tripura E-Governance{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Citizen Services</h1>
+        <p>Access various government services online</p>
+    </div>
+</section>
+
+<section class="services-list">
+    <div class="container">
+        <div class="service-categories">
+            <div class="category">
+                <h2>🏥 Health Services</h2>
+                <ul>
+                    <li><a href="{{ url_for('service_request') }}">Birth Certificate</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Death Certificate</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Health Card Application</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Vaccination Certificate</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <h2>📚 Education Services</h2>
+                <ul>
+                    <li><a href="{{ url_for('service_request') }}">School Admission</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Scholarship Application</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Transfer Certificate</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Migration Certificate</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <h2>🏠 Revenue Services</h2>
+                <ul>
+                    <li><a href="{{ url_for('service_request') }}">Land Records</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Income Certificate</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Caste Certificate</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Domicile Certificate</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <h2>🚗 Transport Services</h2>
+                <ul>
+                    <li><a href="{{ url_for('service_request') }}">Driving License</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Vehicle Registration</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Road Tax Payment</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Learner's License</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <h2>💡 Utility Services</h2>
+                <ul>
+                    <li><a href="{{ url_for('service_request') }}">Electricity Connection</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Water Connection</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Ration Card</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Pension Application</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <h2>👮 Police Services</h2>
+                <ul>
+                    <li><a href="{{ url_for('service_request') }}">Police Verification</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Character Certificate</a></li>
+                    <li><a href="{{ url_for('service_request') }}">Lost Property Report</a></li>
+                    <li><a href="{{ url_for('service_request') }}">NOC Application</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

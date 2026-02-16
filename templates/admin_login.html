@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Login - Tripura E-Governance{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Admin Panel Login</h1>
+        <p>Access the administrative dashboard</p>
+    </div>
+</section>
+
+<section class="form-section">
+    <div class="container">
+        <div class="login-container">
+            <form method="POST" action="{{ url_for('admin') }}" class="login-form">
+                <div class="form-group">
+                    <label for="password">Admin Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter admin password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p class="login-note">Demo password: admin123</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

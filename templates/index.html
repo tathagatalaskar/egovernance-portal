@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to Tripura E-Governance Portal</h1>
+        <p>Digital India Initiative - Empowering Citizens Through Technology</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('services') }}" class="btn btn-primary">View Services</a>
+            <a href="{{ url_for('complaint') }}" class="btn btn-secondary">File Complaint</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="services-overview">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Citizen Services</h3>
+                <p>Access various government services online</p>
+                <a href="{{ url_for('services') }}" class="btn-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📢</div>
+                <h3>File Complaint</h3>
+                <p>Submit and track your complaints online</p>
+                <a href="{{ url_for('complaint') }}" class="btn-link">File Now →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>Documents</h3>
+                <p>Download certificates and forms</p>
+                <a href="{{ url_for('documents') }}" class="btn-link">Download →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Track Status</h3>
+                <p>Check your complaint status</p>
+                <a href="{{ url_for('track_complaint') }}" class="btn-link">Track Now →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="stats">
+    <div class="container">
+        <h2>Portal Statistics</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>1,234</h3>
+                <p>Services Delivered</p>
+            </div>
+            <div class="stat-card">
+                <h3>567</h3>
+                <p>Complaints Resolved</p>
+            </div>
+            <div class="stat-card">
+                <h3>89%</h3>
+                <p>Satisfaction Rate</p>
+            </div>
+            <div class="stat-card">
+                <h3>24/7</h3>
+                <p>Online Support</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links -->
+<section class="quick-links">
+    <div class="container">
+        <h2>Quick Links</h2>
+        <div class="links-grid">
+            <a href="https://tripura.gov.in" target="_blank" class="link-card">
+                <h4>Tripura Government</h4>
+                <p>Official Government Website</p>
+            </a>
+            <a href="#" class="link-card">
+                <h4>Digital India</h4>
+                <p>Digital India Initiative</p>
+            </a>
+            <a href="#" class="link-card">
+                <h4>e-District</h4>
+                <p>District Administration Services</p>
+            </a>
+            <a href="#" class="link-card">
+                <h4>COVID-19 Info</h4>
+                <p>Latest COVID Updates</p>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Tripura E-Governance{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for any queries or assistance</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                
+                <div class="info-item">
+                    <h3>📍 Address</h3>
+                    <p>Tripura E-Governance Department<br>
+                    Secretariat Building, Agartala<br>
+                    Tripura - 799001</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>📞 Phone</h3>
+                    <p>Toll Free: 1800-XXX-XXXX<br>
+                    Office: 0381-2XXXXXX</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>📧 Email</h3>
+                    <p>General: info@tripuragov.in<br>
+                    Support: support@tripuragov.in<br>
+                    Complaints: grievance@tripuragov.in</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>🕐 Office Hours</h3>
+                    <p>Monday - Friday: 10:00 AM - 5:00 PM<br>
+                    Saturday: 10:00 AM - 2:00 PM<br>
+                    Sunday: Closed</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>💻 Online Support</h3>
+                    <p>24/7 Portal Access<br>
+                    Chat Support: 9 AM - 6 PM</p>
+                </div>
+            </div>
+
+            <div class="contact-map">
+                <h2>Office Location</h2>
+                <div class="map-placeholder">
+                    <p>🗺️ Map View</p>
+                    <p>Secretariat Building, Agartala, Tripura</p>
+                    <small>(Interactive map would be integrated here)</small>
+                </div>
+
+                <div class="quick-links-contact">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{{ url_for('complaint') }}">File a Complaint</a></li>
+                        <li><a href="{{ url_for('track_complaint') }}">Track Complaint</a></li>
+                        <li><a href="{{ url_for('services') }}">View Services</a></li>
+                        <li><a href="{{ url_for('documents') }}">Download Forms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="emergency-contacts">
+            <h2>Emergency Contacts</h2>
+            <div class="emergency-grid">
+                <div class="emergency-card">
+                    <h4>🚨 Police</h4>
+                    <p>100</p>
+                </div>
+                <div class="emergency-card">
+                    <h4>🚑 Ambulance</h4>
+                    <p>102</p>
+                </div>
+                <div class="emergency-card">
+                    <h4>🚒 Fire</h4>
+                    <p>101</p>
+                </div>
+                <div class="emergency-card">
+                    <h4>👮 Women Helpline</h4>
+                    <p>1091</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

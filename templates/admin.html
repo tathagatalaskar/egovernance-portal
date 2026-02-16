@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard - Tripura E-Governance{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <p>Manage complaints and service requests</p>
+        <a href="{{ url_for('admin_logout') }}" class="btn btn-secondary">Logout</a>
+    </div>
+</section>
+
+<section class="admin-section">
+    <div class="container">
+        <h2>Recent Complaints</h2>
+        {% if complaints %}
+        <div class="table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Subject</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for complaint in complaints %}
+                    <tr>
+                        <td>#{{ complaint.id }}</td>
+                        <td>{{ complaint.name }}</td>
+                        <td>{{ complaint.department }}</td>
+                        <td>{{ complaint.subject }}</td>
+                        <td>{{ complaint.date_submitted.strftime('%d-%m-%Y') }}</td>
+                        <td><span class="status-badge status-{{ complaint.status|lower }}">{{ complaint.status }}</span></td>
+                        <td>
+                            <form method="POST" action="{{ url_for('update_complaint', complaint_id=complaint.id) }}" style="display: inline;">
+                                <select name="status" onchange="this.form.submit()" class="status-select">
+                                    <option value="Pending" {% if complaint.status == 'Pending' %}selected{% endif %}>Pending</option>
+                                    <option value="In Progress" {% if complaint.status == 'In Progress' %}selected{% endif %}>In Progress</option>
+                                    <option value="Resolved" {% if complaint.status == 'Resolved' %}selected{% endif %}>Resolved</option>
+                                    <option value="Closed" {% if complaint.status == 'Closed' %}selected{% endif %}>Closed</option>
+                                </select>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p>No complaints yet.</p>
+        {% endif %}
+
+        <h2 style="margin-top: 40px;">Service Requests</h2>
+        {% if service_requests %}
+        <div class="table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Service Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for request in service_requests %}
+                    <tr>
+                        <td>#{{ request.id }}</td>
+                        <td>{{ request.name }}</td>
+                        <td>{{ request.service_type }}</td>
+                        <td>{{ request.date_requested.strftime('%d-%m-%Y') }}</td>
+                        <td><span class="status-badge status-{{ request.status|lower }}">{{ request.status }}</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p>No service requests yet.</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
