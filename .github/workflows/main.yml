@@ -1,0 +1,16 @@
+name: PythonAnywhere Auto-Renew
+
+on:
+  schedule:
+    # This runs the bot at midnight UTC on the 1st and 15th of every month
+    - cron: '0 0 1,15 * *'
+  workflow_dispatch: # This lets you run it manually to test
+
+jobs:
+  renew:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extend Web App Expiry
+        run: |
+          curl -X POST "https://www.pythonanywhere.com/api/v0/user/tathagatalaskar/webapps/tathagatalaskar.pythonanywhere.com/extend/" \
+            -H "Authorization: Token ${{ secrets.PA_API_TOKEN }}"
