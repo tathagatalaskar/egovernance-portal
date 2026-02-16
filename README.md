@@ -10,6 +10,14 @@ The Tripura E-Governance Portal is a citizen-centric web application that bridge
 - Downloading official documents
 - Accessing emergency contacts
 - Administrative dashboard for managing requests
+- Live Demo
+You can access the live portal here: tathagatalaskar.pythonanywhere.com
+
+Admin Credentials (for evaluation):
+
+URL: https://tathagatalaskar.pythonanywhere.com/admin
+
+Password: admin123 (demo password)
 
 **Developed by:** Tathagata Laskar  
 **Tech Stack:** Python Flask, SQLite, HTML5, CSS3, JavaScript  
